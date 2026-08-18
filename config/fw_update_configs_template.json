@@ -1,0 +1,120 @@
+{
+    "_comment": [
+        "Firmware update image configuration template.",
+        "Copy this file to config/fw_update_configs.json and fill in",
+        "the actual image paths and expected version strings for your platform.",
+        "Each test case uses the image pair at index 0 (older) and index 1 (newer)",
+        "to test both upgrade and downgrade paths."
+    ],
+
+    "bios_images": [
+        {
+            "label":   "BIOS v1A03 (older)",
+            "path":    "/path/to/bios/bios_v1.bin",
+            "version": "1A03"
+        },
+        {
+            "label":   "BIOS v1A04 (newer)",
+            "path":    "/path/to/bios/bios_v2.bin",
+            "version": "1A04"
+        }
+    ],
+
+    "bmc_images": [
+        {
+            "label":   "BMC v1.07 (older)",
+            "path":    "/path/to/bmc/v1.07/bmc_v1.img",
+            "version": "1.07"
+        },
+        {
+            "label":   "BMC v1.08 (newer)",
+            "path":    "/path/to/bmc/v1.08/bmc_v1.img",
+            "version": "1.08"
+        }
+    ],
+
+    "cpld_images": {
+        "_comment": "Each CPLD device has cfm0 and cfm1 image sets.",
+        "cfm0": {
+            "fanb_down": [
+                {"label": "fanb_down cfm0 v1.01 (older)", "path": "/path/to/cpld/fanb_down_cfm0_v101.jed", "version": "1.01", "board_type": "0xNN"  },
+                {"label": "fanb_down cfm0 v1.02 (newer)", "path": "/path/to/cpld/fanb_down_cfm0_v102.jed", "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "fanb_up": [
+                {"label": "fanb_up cfm0 v1.01 (older)",   "path": "/path/to/cpld/fanb_up_cfm0_v101.jed",   "version": "1.01", "board_type": "0xNN"  },
+                {"label": "fanb_up cfm0 v1.02 (newer)",   "path": "/path/to/cpld/fanb_up_cfm0_v102.jed",   "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "iob_down": [
+                {"label": "iob_down cfm0 v1.01 (older)",  "path": "/path/to/cpld/iob_down_cfm0_v101.jed",  "version": "1.01", "board_type": "0xNN"  },
+                {"label": "iob_down cfm0 v1.02 (newer)",  "path": "/path/to/cpld/iob_down_cfm0_v102.jed",  "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "iob_up": [
+                {"label": "iob_up cfm0 v1.01 (older)",    "path": "/path/to/cpld/iob_up_cfm0_v101.jed",    "version": "1.01", "board_type": "0xNN"  },
+                {"label": "iob_up cfm0 v1.02 (newer)",    "path": "/path/to/cpld/iob_up_cfm0_v102.jed",    "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "hdbp": [
+                {"label": "hdbp cfm0 v1.01 (older)",      "path": "/path/to/cpld/hdbp_cfm0_v101.jed",      "version": "1.01", "board_type": "0xNN"  },
+                {"label": "hdbp cfm0 v1.02 (newer)",      "path": "/path/to/cpld/hdbp_cfm0_v102.jed",      "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "pdb": [
+                {"label": "pdb cfm0 v1.01 (older)",       "path": "/path/to/cpld/pdb_cfm0_v101.jed",       "version": "1.01", "board_type": "0xNN"  },
+                {"label": "pdb cfm0 v1.02 (newer)",       "path": "/path/to/cpld/pdb_cfm0_v102.jed",       "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "mb": [
+                {"label": "mb cfm0 v1.01 (older)",        "path": "/path/to/cpld/mb_cfm0_v101.jed",        "version": "1.01", "board_type": "0xNN"  },
+                {"label": "mb cfm0 v1.02 (newer)",        "path": "/path/to/cpld/mb_cfm0_v102.jed",        "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "ubb": [
+                {"label": "ubb cfm0 v1.01 (older)",       "path": "/path/to/cpld/ubb_cfm0_v101.jed",       "version": "1.01", "board_type": "0xNN"  },
+                {"label": "ubb cfm0 v1.02 (newer)",       "path": "/path/to/cpld/ubb_cfm0_v102.jed",       "version": "1.02", "board_type": "0xNN"  }
+            ]
+        },
+        "cfm1": {
+            "fanb_down": [
+                {"label": "fanb_down cfm1 v1.01 (older)", "path": "/path/to/cpld/fanb_down_cfm1_v101.jed", "version": "1.01", "board_type": "0xNN"  },
+                {"label": "fanb_down cfm1 v1.02 (newer)", "path": "/path/to/cpld/fanb_down_cfm1_v102.jed", "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "fanb_up": [
+                {"label": "fanb_up cfm1 v1.01 (older)",   "path": "/path/to/cpld/fanb_up_cfm1_v101.jed",   "version": "1.01", "board_type": "0xNN"  },
+                {"label": "fanb_up cfm1 v1.02 (newer)",   "path": "/path/to/cpld/fanb_up_cfm1_v102.jed",   "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "iob_down": [
+                {"label": "iob_down cfm1 v1.01 (older)",  "path": "/path/to/cpld/iob_down_cfm1_v101.jed",  "version": "1.01", "board_type": "0xNN"  },
+                {"label": "iob_down cfm1 v1.02 (newer)",  "path": "/path/to/cpld/iob_down_cfm1_v102.jed",  "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "iob_up": [
+                {"label": "iob_up cfm1 v1.01 (older)",    "path": "/path/to/cpld/iob_up_cfm1_v101.jed",    "version": "1.01", "board_type": "0xNN"  },
+                {"label": "iob_up cfm1 v1.02 (newer)",    "path": "/path/to/cpld/iob_up_cfm1_v102.jed",    "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "hdbp": [
+                {"label": "hdbp cfm1 v1.01 (older)",      "path": "/path/to/cpld/hdbp_cfm1_v101.jed",      "version": "1.01", "board_type": "0xNN"  },
+                {"label": "hdbp cfm1 v1.02 (newer)",      "path": "/path/to/cpld/hdbp_cfm1_v102.jed",      "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "pdb": [
+                {"label": "pdb cfm1 v1.01 (older)",       "path": "/path/to/cpld/pdb_cfm1_v101.jed",       "version": "1.01", "board_type": "0xNN"  },
+                {"label": "pdb cfm1 v1.02 (newer)",       "path": "/path/to/cpld/pdb_cfm1_v102.jed",       "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "mb": [
+                {"label": "mb cfm1 v1.01 (older)",        "path": "/path/to/cpld/mb_cfm1_v101.jed",        "version": "1.01", "board_type": "0xNN"  },
+                {"label": "mb cfm1 v1.02 (newer)",        "path": "/path/to/cpld/mb_cfm1_v102.jed",        "version": "1.02", "board_type": "0xNN"  }
+            ],
+            "ubb": [
+                {"label": "ubb cfm1 v1.01 (older)",       "path": "/path/to/cpld/ubb_cfm1_v101.jed",       "version": "1.01", "board_type": "0xNN"  },
+                {"label": "ubb cfm1 v1.02 (newer)",       "path": "/path/to/cpld/ubb_cfm1_v102.jed",       "version": "1.02", "board_type": "0xNN"  }
+            ]
+        }
+    },
+
+    "amc_images": [
+        {
+            "label":   "AMC v2.01 (older)",
+            "path":    "/path/to/amc/v2.01/amc_fw.pldm",
+            "version": "2.01"
+        },
+        {
+            "label":   "AMC v2.02 (newer)",
+            "path":    "/path/to/amc/v2.02/amc_fw.pldm",
+            "version": "2.02"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Distribution / packaging
+.Python
+dist/
+build/
+eggs/
+*.egg-info/
+*.egg
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project-specific — never commit these
+# (copy from templates and fill in for your unit under test)
+config/sys_conf.json
+config/i2c_stress_test.ini
+config/i2c_stress_test_dc_off.ini
+
+# Firmware images (large binary files — store elsewhere)
+*.bin
+*.ima
+*.ima_enc
+*.jed
+*.jed_enc
+*.pldm
+*.img
+
+# Test log output
+*.log
+reports/
+
+# ChromeDriver binary (download separately, version must match Chrome)
+chromedriver
+chromedriver.exe
